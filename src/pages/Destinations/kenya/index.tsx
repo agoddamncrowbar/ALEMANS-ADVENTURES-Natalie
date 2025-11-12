@@ -5,7 +5,7 @@ import KenyaSections from "../../../components/destinations/kenya/KenyaSections"
 import { useState } from "react";
 
 export default function Kenya() {
-  const [country, setCountry] = useState("Kenya");
+  const [country] = useState("Kenya");
 
   return (
     <Layout showHero={false}>
