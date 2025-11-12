@@ -1,0 +1,38 @@
+import React from 'react';
+import kenyaData from '../data/countries/kenya.json';
+
+const Kenya = () => {
+  return (
+    <div style={{ padding: '2rem' }}>
+      <h1>{kenyaData.name}</h1>
+      <p>{kenyaData.description}</p>
+
+      {kenyaData.attractions && kenyaData.attractions.length > 0 && (
+        <div>
+          <h2>Top Attractions</h2>
+          <ul>
+            {kenyaData.attractions.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {kenyaData.images && kenyaData.images.length > 0 && (
+        <div>
+          <h2>Gallery</h2>
+          {kenyaData.images.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`Kenya ${index + 1}`}
+              style={{ width: '300px', margin: '1rem 0' }}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Kenya;

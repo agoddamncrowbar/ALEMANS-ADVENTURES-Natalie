@@ -3,7 +3,9 @@ import HomePage from './pages/Home'
 import AboutPage from './pages/About'
 import Destinations from './pages/Destinations'
 import Kenya from './pages/Destinations/kenya/index'
-import Contact from './pages/Contact'
+import Contact from './pages/contact';
+
+
 function App() {
   return (
     <>
